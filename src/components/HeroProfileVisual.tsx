@@ -31,8 +31,8 @@ export function HeroProfileVisual({
       <motion.div
         className={`absolute z-[30] rounded-2xl border border-white/20 bg-slate-900/40 p-4 shadow-[0_20px_50px_rgba(0,0,0,0.5)] backdrop-blur-xl ${
           compact
-            ? '-left-2 top-[10%] w-24 sm:w-28'
-            : '-left-4 top-[15%] w-28 sm:w-40 md:-left-24 lg:-left-32'
+            ? '-left-6 top-[15%] w-24 sm:w-28'
+            : '-left-12 top-[18%] w-32 sm:w-40 md:-left-24 lg:-left-32'
         }`}
         initial={{ opacity: 0, x: -30 }}
         animate={{ 
@@ -48,7 +48,7 @@ export function HeroProfileVisual({
           rotate: { duration: 7, repeat: Infinity, ease: 'easeInOut' }
         }}
       >
-        <div className="flex items-center gap-2 mb-2">
+        <div className="flex items-center gap-2 mb-1 sm:mb-2">
           <div className="flex h-6 w-6 sm:h-8 sm:w-8 items-center justify-center rounded-lg bg-gradient-to-br from-cyan-500 to-emerald-500 shadow-lg shadow-cyan-500/20">
             <span className="text-[10px] sm:text-xs font-bold text-white">{'</>'}</span>
           </div>
@@ -62,8 +62,8 @@ export function HeroProfileVisual({
       <motion.div
         className={`absolute z-[30] rounded-xl border border-white/10 bg-[#0c111d]/85 shadow-[0_25px_60px_rgba(0,0,0,0.6)] backdrop-blur-xl overflow-hidden ${
           compact
-            ? '-right-2 bottom-[10%] w-32 sm:w-40'
-            : '-right-4 bottom-[10%] w-36 sm:w-56 md:-right-28 lg:-right-36'
+            ? '-right-6 bottom-[10%] w-32 sm:w-40'
+            : '-right-12 bottom-[15%] w-44 sm:w-56 md:-right-28 lg:-right-36'
         }`}
         initial={{ opacity: 0, x: 30 }}
         animate={{ 
@@ -96,8 +96,8 @@ export function HeroProfileVisual({
       <motion.div
         className={`absolute z-[30] rounded-2xl border border-red-500/30 bg-slate-950/60 p-3 sm:p-4 shadow-[0_20px_50px_rgba(220,38,38,0.2)] backdrop-blur-xl ${
           compact
-            ? 'right-0 top-[-10%] hidden sm:block'
-            : '-right-2 top-[5%] w-28 sm:w-40 md:-right-20 lg:-right-28'
+            ? '-right-4 top-[5%] w-28 sm:w-32'
+            : '-right-8 top-[10%] w-32 sm:w-40 md:-right-20 lg:-right-28'
         }`}
         initial={{ opacity: 0, y: -20 }}
         animate={{ 
@@ -111,7 +111,7 @@ export function HeroProfileVisual({
           x: { duration: 5, repeat: Infinity, ease: 'easeInOut' }
         }}
       >
-        <div className="flex items-center gap-2 mb-1 sm:mb-2">
+        <div className="flex items-center gap-2">
           <div className="flex h-5 w-5 sm:h-7 sm:w-7 items-center justify-center rounded-full bg-red-500/20 border border-red-500/50">
             <div className="h-1.5 w-1.5 rounded-full bg-red-500 animate-pulse" />
           </div>

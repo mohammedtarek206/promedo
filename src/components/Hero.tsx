@@ -23,7 +23,7 @@ export function Hero() {
           >
             <HeroProfileVisual
               compact
-              className="mx-auto mb-10 aspect-[4/5] w-full max-w-[220px] lg:hidden"
+              className="mx-auto mb-10 aspect-[3/4] w-full max-w-[280px] lg:hidden"
               profileSrc={PROFILE_IMG}
               profileAlt="Mohammed Tarek"
               priority
