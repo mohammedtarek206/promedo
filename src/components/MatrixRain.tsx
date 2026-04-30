@@ -6,6 +6,8 @@ export function MatrixRain() {
   const { theme } = useCyberMode();
 
   useEffect(() => {
+    // Disable Matrix Rain on mobile/touch devices for performance
+    if (window.innerWidth < 768) return;
     const canvas = canvasRef.current;
     if (!canvas) return;
 

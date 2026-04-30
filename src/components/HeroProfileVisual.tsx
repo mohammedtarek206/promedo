@@ -131,11 +131,11 @@ export function HeroProfileVisual({
 
       {/* Main Image Container */}
       <motion.div
-        className={`animate-float relative mx-auto h-full w-full overflow-hidden rounded-3xl border border-cyan-400/45 bg-transparent ${ring}`}
-        initial={{ opacity: 0, rotateX: 10, rotateY: -12, scale: 0.96 }}
-        animate={{ opacity: 1, rotateX: 4, rotateY: -8, scale: 1 }}
-        transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-        style={{ transformStyle: 'preserve-3d', perspective: 1200 }}
+        className={`animate-float-slow relative mx-auto h-full w-full overflow-hidden rounded-3xl border border-cyan-400/45 bg-transparent ${ring}`}
+        initial={{ opacity: 0, scale: 0.98 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1, ease: 'easeOut' }}
+        style={window.innerWidth >= 768 ? { transformStyle: 'preserve-3d', perspective: 1200, rotateX: 4, rotateY: -8 } : {}}
       >
         <img
           src={profileSrc}

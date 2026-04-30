@@ -32,10 +32,19 @@
 
 @layer utilities {
   .glass {
-    @apply bg-white/[0.03] backdrop-blur-xl border border-white/10;
+    @apply bg-white/[0.03] border border-white/10;
+    backdrop-filter: blur(8px);
   }
+  @screen sm {
+    .glass { backdrop-filter: blur(16px); }
+  }
+
   .glass-strong {
-    @apply bg-slate-900/40 backdrop-blur-2xl border border-white/[0.08];
+    @apply bg-slate-900/40 border border-white/[0.08];
+    backdrop-filter: blur(12px);
+  }
+  @screen sm {
+    .glass-strong { backdrop-filter: blur(24px); }
   }
   .text-gradient {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-[var(--cyber-primary)] via-[var(--cyber-secondary)] to-[var(--cyber-accent)];

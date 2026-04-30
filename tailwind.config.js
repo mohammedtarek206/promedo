@@ -23,6 +23,7 @@ export default {
       animation: {
         'pulse-glow': 'pulse-glow 4s ease-in-out infinite',
         float: 'float 6s ease-in-out infinite',
+        'float-slow': 'float 12s ease-in-out infinite',
       },
       keyframes: {
         'pulse-glow': {
