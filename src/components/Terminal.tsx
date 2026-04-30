@@ -1,6 +1,5 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useCyberMode } from '../hooks/useCyberMode';
 import { sounds } from '../utils/sounds';
 
 interface HistoryItem {
@@ -16,7 +15,6 @@ export function Terminal() {
     { type: 'output', content: 'Authorized Access Only. Type "help" for protocols.' },
   ]);
 
-  const { theme } = useCyberMode();
   const scrollRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 

@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useState } from 'react';
+import { motion } from 'framer-motion';
 
 export function SplashScreen({ onComplete }: { onComplete: () => void }) {
   const [status, setStatus] = useState<'locked' | 'scanning' | 'granted'>('locked');
