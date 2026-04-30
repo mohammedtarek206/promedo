@@ -31,10 +31,10 @@ export function CyberBackground() {
         animate={{ opacity: [0.3, 0.7, 0.3] }}
         transition={{ duration: 4, repeat: Infinity }}
       />
-      {[...Array(24)].map((_, i) => (
+      {[...Array(window.innerWidth < 768 ? 6 : 24)].map((_, i) => (
         <motion.div
           key={i}
-          className="absolute h-px bg-gradient-to-r from-transparent via-cyan-400/40 to-transparent"
+          className="absolute h-px bg-gradient-to-r from-transparent via-cyan-400/40 to-transparent transform-gpu"
           style={{
             width: `${40 + (i % 5) * 30}%`,
             left: `${(i * 7) % 85}%`,

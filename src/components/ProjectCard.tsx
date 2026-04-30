@@ -30,11 +30,12 @@ export function ProjectCard({ project, index }: Props) {
         tiltMaxAngleX={10}
         tiltMaxAngleY={10}
         perspective={1200}
-        glareEnable
+        glareEnable={window.innerWidth >= 768}
         glareMaxOpacity={0.18}
         glareColor={primaryColor}
-        scale={1.02}
+        scale={window.innerWidth >= 768 ? 1.02 : 1}
         transitionSpeed={1800}
+        tiltEnable={window.innerWidth >= 768}
         className="h-full"
       >
         <div className={`group relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-slate-900/40 shadow-xl transition-all duration-500 hover:scale-[1.02] ${

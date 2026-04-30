@@ -10,6 +10,7 @@ export function CyberCursor() {
   const cursorY = useSpring(0, springConfig);
 
   useEffect(() => {
+    if (window.innerWidth < 1024) return;
     const moveMouse = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
       cursorX.set(e.clientX - 16);
