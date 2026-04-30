@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { useCyberMode } from '../hooks/useCyberMode';
 
 export function MatrixRain() {

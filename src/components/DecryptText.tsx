@@ -1,16 +1,15 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 const CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*()_+';
 
 export function DecryptText({ text, speed = 50, revealDelay = 500 }: { text: string; speed?: number; revealDelay?: number }) {
   const [displayText, setDisplayText] = useState('');
-  const [isRevealing, setIsRevealing] = useState(false);
 
   const scramble = useCallback(() => {
     let iteration = 0;
     const interval = setInterval(() => {
-      setDisplayText(prev => 
-        text.split('').map((char, index) => {
+      setDisplayText(_prev => 
+        text.split('').map((_char, index) => {
           if (index < iteration) return text[index];
           return CHARS[Math.floor(Math.random() * CHARS.length)];
         }).join('')
@@ -25,7 +24,6 @@ export function DecryptText({ text, speed = 50, revealDelay = 500 }: { text: str
 
   useEffect(() => {
     const timeout = setTimeout(() => {
-      setIsRevealing(true);
       scramble();
     }, revealDelay);
     return () => clearTimeout(timeout);

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useCyberMode } from '../hooks/useCyberMode';
 
@@ -14,7 +14,6 @@ const SCAN_MESSAGES = [
 export function CyberScanner() {
   const { theme } = useCyberMode();
   const [index, setIndex] = useState(0);
-  const [visible, setVisible] = useState(true);
 
   useEffect(() => {
     const interval = setInterval(() => {
