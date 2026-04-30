@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --cyber-primary: #22d3ee; /* cyan-400 */
+    --cyber-secondary: #34d399; /* emerald-400 */
+    --cyber-accent: #38bdf8; /* sky-400 */
+    --cyber-glow: rgba(34, 211, 238, 0.5);
+  }
+
+  [data-theme='cyber'] {
+    --cyber-primary: #10b981; /* emerald-500 - Matrix Green */
+    --cyber-secondary: #059669;
+    --cyber-accent: #34d399;
+    --cyber-glow: rgba(16, 185, 129, 0.6);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    transition: background-color 0.5s ease;
+  }
+  body {
+    @apply bg-cyber-bg text-slate-100 antialiased font-sans overflow-x-hidden;
+    transition: color 0.3s ease;
+  }
+  ::selection {
+    @apply bg-cyan-500/30 text-white;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/[0.03] backdrop-blur-xl border border-white/10;
+  }
+  .glass-strong {
+    @apply bg-slate-900/40 backdrop-blur-2xl border border-white/[0.08];
+  }
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[var(--cyber-primary)] via-[var(--cyber-secondary)] to-[var(--cyber-accent)];
+    transition: all 0.5s ease;
+  }
+  .line-glow {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      var(--cyber-glow),
+      var(--cyber-secondary),
+      transparent
+    );
+  }
+}
